@@ -13,8 +13,12 @@ nav {
     justify-content: space-between;
 }
 
+nav img {
+    width: 80px;
+}
+
 nav h1 {
-    margin-left: -650px !important;
+    margin-left: -450px !important;
 }
   
 nav ul {
@@ -33,6 +37,7 @@ nav ul li {
     width: 250px;
     height: 30px;
     padding-left: 16px;
+    box-sizing: border-box;
 }
 
 #searchInput::placeholder {
@@ -64,9 +69,13 @@ a {
     padding-top: 120px;
 }
 
-.home button {
+button {
     width: 120px;
     height: 30px;
     background-color: rgba(15, 105, 125, 0.8) !important;
     border: none;
+}
+
+button:hover {
+    cursor: pointer;
 }
