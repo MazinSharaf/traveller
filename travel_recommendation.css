@@ -79,3 +79,34 @@ button {
 button:hover {
     cursor: pointer;
 }
+
+#description {
+    width: 80%;
+    background-color: rgba(15, 105, 125, 0.8);
+    border: none;
+}
+
+#person {
+    width: 20%;
+    background-color: rgba(15, 105, 125, 0.8);
+    border: none;
+}
+
+.inputs {
+    background-color: rgba(15, 105, 125, 0.8);
+    width: fit-content;
+}
+
+#name, #email {
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 1%;
+    border-color: white;
+}
+#message {
+    width: 400px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 1%;
+    border-color: white;
+}
