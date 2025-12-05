@@ -20,6 +20,13 @@ function searchDestination() {
                 const destination = data.destinations.find(
                     item => item.name.toLowerCase() === input
                 );
+
+                if (
+                    destination
+                ) {
+                   console.log(${destination.name}) 
+                }
             }
         )
 }
+
