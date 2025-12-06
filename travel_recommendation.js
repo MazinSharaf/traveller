@@ -17,16 +17,17 @@ function searchDestination() {
 
         .then (
             data => {
-                const destination = data.destinations.find(
+                const country = data.countries.find(
                     item => item.name.toLowerCase() === input
                 );
 
                 if (
-                    destination
+                    country
                 ) {
-                   console.log(${destination.name}) 
+                   console.log(country.name) 
                 }
             }
         )
 }
+
 
