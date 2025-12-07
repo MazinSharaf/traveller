@@ -17,40 +17,58 @@ function searchDestination() {
 
         .then (
             data => {
-                const country = data.countries.find(
-                    item => item.name.toLowerCase() === input
+                const country = data.countries.filter(
+                    item => item.name.toLowerCase().includes(input)
                 );
 
-                const city = data.countries.cities.find(
-                    item => item.name.toLowerCase === input
+                const city = country ? country.cities.filter(
+                    item => item.name.toLowerCase().include(input)
+                ) : undefined;
+
+                const temple = data.temples.filter(
+                    item => item.name.toLowerCase().include(input)
                 );
 
-                const temple = data.temples.find(
-                    item => item.name.toLowerCase() === input
+                const beach = data.beaches.filter(
+                    item => item.name.toLowerCase().include(input)
                 );
 
-                const beach = data.beaches.find(
-                    item => item.name.toLowerCase() === input
+                country.forEach(
+                    country => {
+                        console.log(
+                            country.name
+                        );
+                    }
                 );
 
-                if (
-                    country
-                ) {
-                    console.log(country.name) 
-                }
+                city.forEach(
+                    city => {
+                        console.log(
+                            city.name
+                        );
+                    }
+                );
 
-                if (
-                    temple
-                ) {
-                    console.log(temple.name)
-                }
+                temple.forEach(
+                    temple => {
+                        console.log(
+                            temple.name
+                        );
+                    }
+                );
 
-                if (
-                    beach
-                ) {
-                    console.log(beach.name)
-                }
+                beach.forEach(
+                    beach => {
+                        console.log(
+                            beach.name
+                        );
+                    }
+                );
             }
+        )
+
+        .catch (
+            {}
         )
 }
 
