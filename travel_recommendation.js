@@ -10,66 +10,94 @@ function searchDestination() {
     fetch (
         'travel_recommendation_api.json'
     )
-
         .then (
             response => response.json()
         )
 
         .then (
-            data => {
-                const country = data.countries.filter(
-                    item => item.name.toLowerCase().includes(input)
-                );
+                data => {
+                    const country = data.countries.filter(
+                        item => item.name.toLowerCase().includes(
+                            input
+                        )
+                    );
 
-                const city = country ? country.cities.filter(
-                    item => item.name.toLowerCase().include(input)
-                ) : undefined;
+                    const temple = data.temples.filter(
+                        item => item.name.toLowerCase().includes(
+                            input
+                        )
+                    );
 
-                const temple = data.temples.filter(
-                    item => item.name.toLowerCase().include(input)
-                );
+                    const beach = data.beaches.filter(
+                        item => item.name.toLowerCase().includes(
+                            input
+                        )
+                    );
 
-                const beach = data.beaches.filter(
-                    item => item.name.toLowerCase().include(input)
-                );
+                    const city = [];
+                    data.countries.forEach(
+                        countryItem => {
+                            if (
+                                countryItem.cities && Array.isArray(
+                                    countryItem.cities
+                                )
+                            ) {
+                                const cities = countryItem.cities.filter(
+                                    item => item.name.toLowerCase().includes(
+                                        input
+                                    )
+                                );
+                                city.push(
+                                    ...cities
+                                );
+                            }
+                        }
+                    );
 
-                country.forEach(
-                    country => {
+                    if (
+                        country
+                    ) {
                         console.log(
-                            country.name
+                            'Countries:', 
+                            country
+                        );
+                        resultDiv.innerHTML += '<h1>Check</h1>'
+                    }
+                    
+                    if (
+                        temple
+                    ) {
+                        console.log(
+                            'Temples:', 
+                            temple
                         );
                     }
-                );
-
-                city.forEach(
-                    city => {
+                    
+                    if (
+                        beach
+                    ) {
                         console.log(
-                            city.name
-                        );
+                            'Beaches:',
+                            beach
+                        )
                     }
-                );
-
-                temple.forEach(
-                    temple => {
+                    
+                    if (
+                        city
+                    ) {
                         console.log(
-                            temple.name
-                        );
+                            'Cities:',
+                            city
+                        )
                     }
-                );
-
-                beach.forEach(
-                    beach => {
-                        console.log(
-                            beach.name
-                        );
-                    }
-                );
             }
         )
-
-        .catch (
-            {}
-        )
+        .catch(
+                error => {
+                    console.error(
+                        'Error fetching data:', 
+                        error
+                    );
+            }
+        );
 }
-
-
