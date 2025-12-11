@@ -58,10 +58,10 @@ function searchDestination() {
                         country
                     ) {
                         console.log(
-                            'Countries:', 
+                            'Countries:',
                             country
                         );
-                        resultDiv.innerHTML += '<h1>Check</h1>'
+                        resultDiv.innerHTML += `<h1>${country}</h1>`;
                     }
                     
                     if (
