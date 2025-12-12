@@ -61,7 +61,7 @@ function searchDestination() {
                             'Countries:',
                             country
                         );
-                        resultDiv.innerHTML += `<h1>${country}</h1>`;
+                        resultDiv.innerHTML = country.name;
                     }
                     
                     if (
