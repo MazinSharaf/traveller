@@ -61,7 +61,10 @@ function searchDestination() {
                             'Countries:',
                             country
                         );
-                        resultDiv.innerHTML = country.name;
+                        resultDiv.innerHTML = `<h1>${country[0].cities[0].name}</h1><br>`;
+                        resultDiv.innerHTML = `<img src=${country[0].cities[0].imageUrl}>`;
+                        resultDiv.innerHTML += `<h3>About:</h1><br>`;
+                        resultDiv.innerHTML += `<p>${country[0].cities[0].description}</p>`;
                     }
                     
                     if (
