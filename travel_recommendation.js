@@ -16,6 +16,7 @@ function searchDestination() {
 
         .then (
                 data => {
+                    resultDiv.innerHTML = ``;
                     // const country = data.countries.filter(
                     //     item => item.name.toLowerCase().includes(
                     //         input
