@@ -26,7 +26,7 @@
             <!-- Unordered List SS -->
             <ul>
                 <li>
-                    <a href="./home.html" id="home">
+                    <a href="./travel_recommendation.html" id="home">
                         Home
                     </a> <!-- When clicked it brings you to the home page -->
                 </li>
@@ -41,22 +41,6 @@
                     <a href="./contact.html" id="contact">
                         Contact
                     </a> <!-- When clicked it brings you to the contact us page -->
-                </li>
-
-                <li>
-                    <input type="text" id="searchInput" placeholder="Enter a place name..."> <!-- -->
-                </li>
-
-                <li>
-                    <button id="btnSearch">
-                        Search
-                    </button> <!-- When the user puts an input they click the button to search -->
-                </li>
-
-                <li>
-                    <button id="clear">
-                        Clear
-                    </button> <!-- When clicked it clears the search results -->
                 </li>
             </ul>
             <!-- Unordered List SE -->
@@ -90,10 +74,12 @@
                 <textarea placeholder="Enter your name" id="message"></textarea><br><br>
             </div><br>
 
-            <button id="submit">
+            <button id="submit" onclick="submitFeedback()">
                 Submit
             </button>
         </div>
+
+        <script src="travel_recommendation.js"></script>
         <!-- Division with the class home SE -->
     </body>
 </html>
