@@ -177,7 +177,7 @@ function searchDestination() {
                                 i++
                             ) {
                                 resultDiv.innerHTML += `<h1>${city[i].name}</h1><br>`;
-                                resultDiv.innerHTML += `<img src=${temple[i].imageUrl}>`;
+                                resultDiv.innerHTML += `<img src=${city[i].imageUrl}>`;
                                 resultDiv.innerHTML += `<h3>About:</h3><br>`;
                                 resultDiv.innerHTML += `<p>${city[i].description}</p><br>`;
                             }
@@ -194,3 +194,4 @@ function searchDestination() {
             );
     }
 }
+
