@@ -8,6 +8,21 @@ function clearSearch() {
     ).innerHTML = '';
 }
 
+function submitFeedback() {
+    nameInputElement = document.getElementById(
+        'name'
+    ).value = '';
+
+    emailInputElement = document.getElementById(
+        'email'
+    ).value = '';
+
+    feedbackInputElement = document.getElementById(
+        'message'
+    ).value = '';
+
+    alert("Thank you for the feedback!")
+}
 
 function searchDestination() {
     const input = document.getElementById(
@@ -124,7 +139,7 @@ function searchDestination() {
                                 i++
                             ) {
                                 resultDiv.innerHTML += `<h1>${temple[i].name}</h1><br>`;
-                                // resultDiv.innerHTML += `<img src=${temple[i].imageUrl}>`;
+                                resultDiv.innerHTML += `<img src=${temple[i].imageUrl}>`;
                                 resultDiv.innerHTML += `<h3>About:</h3><br>`;
                                 resultDiv.innerHTML += `<p>${temple[i].description}</p><br>`;
                             }
@@ -143,7 +158,7 @@ function searchDestination() {
                                 i++
                             ) {
                                 resultDiv.innerHTML += `<h1>${beach[i].name}</h1><br>`;
-                                // resultDiv.innerHTML += `<img src=${beach[i].imageUrl}>`;
+                                resultDiv.innerHTML += `<img src=${beach[i].imageUrl}>`;
                                 resultDiv.innerHTML += `<h3>About:</h3><br>`;
                                 resultDiv.innerHTML += `<p>${beach[i].description}</p><br>`;
                             }
@@ -162,7 +177,7 @@ function searchDestination() {
                                 i++
                             ) {
                                 resultDiv.innerHTML += `<h1>${city[i].name}</h1><br>`;
-                                // resultDiv.innerHTML += `<img src=${temple[i]imageUrl}>`;
+                                resultDiv.innerHTML += `<img src=${temple[i].imageUrl}>`;
                                 resultDiv.innerHTML += `<h3>About:</h3><br>`;
                                 resultDiv.innerHTML += `<p>${city[i].description}</p><br>`;
                             }
